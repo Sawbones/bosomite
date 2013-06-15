@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GameEncode</title>
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="span8 offset2">
+			<h3>List of drinks: <small><a href="/drink/add">Add Drinks</a></small></h3>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="span8 offset2">
+
+			<table class="table">
+				<tr>
+					<th>ID</th>
+					<th>NAME</th>
+					<th>DESCRIPTION</th>
+					<th>Ingredients</th>
+				</tr>
+				{{#each view_data}}
+				<tr>
+					<td style="width:10%">
+						{{ id }}
+					</td>
+					<td style="width:25%">
+						{{ name }}
+					</td>
+					<td>
+						{{ description }}
+					</td>
+					<td style="width:40%">
+						{{#each ingredients}}
+							{{ this }}
+							<br />
+						{{/each}}
+					</td>
+				</tr>
+				{{/each}}
+			</table>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>

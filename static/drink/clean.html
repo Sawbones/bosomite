@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clean Ingredeints</title>
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="span12">
+			<table class="table">
+			{{#each drinks}}
+				<tr>
+					<td>
+						{{ _id }}
+					</td>
+					<td>
+						{{ name }}
+					</td>
+					<td>
+						<ul>
+						{{#each ingredients}}
+							<li>
+								{{ this }}
+							</li>
+						{{/each}}
+						</ul>
+					</td>
+				</tr>
+			{{/each}}
+			</table>
+		</div>
+	</div>
+</div>
+</body>
+</html>
